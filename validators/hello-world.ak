@@ -31,7 +31,7 @@ test hello_world_example() {
         Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
 
     let redeemer =
-        Redeemer { msg: "Aiken Rocks!" }
+        Redeemer { msg: "Hello, World!" }
 
     let placeholder_utxo =
         OutputReference { transaction_id: TransactionId(""), output_index: 0 }
