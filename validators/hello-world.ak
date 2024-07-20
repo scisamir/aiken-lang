@@ -1,7 +1,7 @@
 use aiken/hash.{Blake2b_224, Hash}
 use aiken/list
 use aiken/string
-use aiken/transaction.{OutputReference, ScriptContext, Spend, TransactionId}
+use aiken/transaction.{OutputReference, ScriptContext, Spend, Transaction, TransactionId}
 use aiken/transaction/credential.{VerificationKey}
 
 type Datum {
@@ -39,7 +39,10 @@ test hello_world_example() {
     let context =
         ScriptContext {
             purpose: Spend(placeholder_utxo),
-            transaction: transaction.placeholder(),
+            transaction: transaction.placeholder()
+                |> fn(transaction) {
+                    Transaction { ..transaction, extra_signatories: [datum.owner] }
+                },
         }
 
     hello_world(datum, redeemer, context)
