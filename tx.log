@@ -1,0 +1,24 @@
+"LOCK TRANSACTION OUTPUT":
+
+1 tADA locked into the contract at:
+    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
+    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
+1 tADA locked into the contract at:
+    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
+    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
+1 tADA locked into the contract at:
+    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
+    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
+
+
+"UNLOCK TRANSACTION OUTPUT":
+
+1 tADA unlocked from the contract
+    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
+    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
+1 tADA unlocked from the contract
+    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
+    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
+1 tADA unlocked from the contract
+    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
+    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
