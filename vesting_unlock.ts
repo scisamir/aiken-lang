@@ -84,10 +84,13 @@ const utxos = scriptUtxos.filter((utxo) => {
             utxo.datum,
             Datum,
         );
+
+        // log code
         if (utxo.txHash === Deno.args[0]) {
             console.log(`\nCurrent time: ${currentTime}\n`);
             console.log(`\nDatum lock time: ${datum.lock_until}\n`);
         }
+
         return (datum.beneficiary === beneficiaryPublicHash &&
             datum.lock_until <= currentTime) && utxo.txHash === Deno.args[0];
     } catch (err) {
@@ -96,6 +99,7 @@ const utxos = scriptUtxos.filter((utxo) => {
     }
 });
 
+// log code
 for (let i in utxos) {
     console.log(`\nUTXO Array element: ${utxos[i].datum}\n${utxos[i].txHash}`);
 }
