@@ -1,24 +1,25 @@
-"LOCK TRANSACTION OUTPUT":
+"LOCK VESTING OUTPUT":
 
-1 tADA locked into the contract at:
-    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
-    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
-1 tADA locked into the contract at:
-    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
-    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
-1 tADA locked into the contract at:
-    Tx ID: 86f2f99e09061c3f651fe28578cc2521b5c5712d0174fe9aff2fbde59904547c
-    Datum: d8799f581c227691807c6604c9e220e8fd223d7054ec8fddc669827c6a06bde0a5ff
+1 tADA locked into the contract
+    Tx ID: caa42e36a1be0d9e55952d8a5c2a7d6236dbeef5d35257a3b819c0272991cfc7
+    Datum: d8799f1b000001857d4522a8581c793de8d57a72adbb05694d2f70fe0aad0b2ecaaf25d31c0a5d68012e581c4680734b93866fc984b8297cd1b95a27ea10834a8dc15eb68b3fd2b2ff
+1 tADA locked into the contract
+    Tx ID: caa42e36a1be0d9e55952d8a5c2a7d6236dbeef5d35257a3b819c0272991cfc7
+    Datum: d8799f1b000001857d4522a8581c793de8d57a72adbb05694d2f70fe0aad0b2ecaaf25d31c0a5d68012e581c4680734b93866fc984b8297cd1b95a27ea10834a8dc15eb68b3fd2b2ff
+1 tADA locked into the contract
+    Tx ID: caa42e36a1be0d9e55952d8a5c2a7d6236dbeef5d35257a3b819c0272991cfc7
+    Datum: d8799f1b000001857d4522a8581c793de8d57a72adbb05694d2f70fe0aad0b2ecaaf25d31c0a5d68012e581c4680734b93866fc984b8297cd1b95a27ea10834a8dc15eb68b3fd2b2ff
 
 
-"UNLOCK TRANSACTION OUTPUT":
 
-1 tADA unlocked from the contract
-    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
-    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
-1 tADA unlocked from the contract
-    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
-    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
-1 tADA unlocked from the contract
-    Tx ID: ff659496e98650816611e00d13d357d6e1748f36dc350495abcddb64a6f7804d
-    Redeemer: d8799f4d48656c6c6f2c20576f726c6421ff
+"UNLOCK VESTING OUTPUT":
+
+1 tADA recovered from the contract
+    Tx ID: e44a430b8c938d4f846db14176308f6b50c827b184c7e8325ee8d43eba732938
+    Redeemer: d87980
+1 tADA recovered from the contract
+    Tx ID: e44a430b8c938d4f846db14176308f6b50c827b184c7e8325ee8d43eba732938
+    Redeemer: d87980
+1 tADA recovered from the contract
+    Tx ID: e44a430b8c938d4f846db14176308f6b50c827b184c7e8325ee8d43eba732938
+    Redeemer: d87980
