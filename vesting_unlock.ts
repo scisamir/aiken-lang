@@ -43,13 +43,6 @@ const scriptAddress = lucid.utils.validatorToAddress(validator);
 
 const scriptUtxos = await lucid.utxosAt(scriptAddress); 
 
-// new block
-// const ref: OutRef = { txHash: Deno.args[0], outputIndex: 1 }
-// const [utxo] = await lucid.utxosByOutRef([ref]);
-// console.log(`\nDatum of utxo: ${utxo.datum}\n${utxo.txHash}\n`);
-// console.log(`\nUTXO: ${utxo}\n`);
-// new end
-
 const Datum = Data.Object({
     lock_until: Data.BigInt,
     owner: Data.String,
@@ -60,36 +53,12 @@ type Datum = Data.Static<typeof Datum>;
 
 const currentTime = new Date().getTime();
 
-// new block
-// let datum = Data.from<Datum>(
-//     utxo.datum,
-//     Datum,
-// );
-
-// if (utxo && datum) {
-//     if (datum.beneficiary === beneficiaryPublicHash &&
-//             datum.lock_until <= currentTime) {
-//         console.log(`\nis datum valid?: ${datum.lock_until}\n`);
-//         console.log(`\nthe datum: ${datum}\n`);
-//     } else {
-//         console.log("No redeemable utxo found. You need to wait a little longer...");
-//         Deno.exit(1);
-//     }
-// }
-// new end
-
 const utxos = scriptUtxos.filter((utxo) => {
     try {
         let datum = Data.from<Datum>(
             utxo.datum,
             Datum,
         );
-
-        // log code
-        // if (utxo.txHash === Deno.args[0]) {
-        //     console.log(`\nCurrent time: ${currentTime}\n`);
-        //     console.log(`\nDatum lock time: ${datum.lock_until}\n`);
-        // }
 
         return datum.beneficiary === beneficiaryPublicHash &&
             datum.lock_until <= currentTime;
