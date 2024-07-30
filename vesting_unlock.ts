@@ -86,13 +86,13 @@ const utxos = scriptUtxos.filter((utxo) => {
         );
 
         // log code
-        if (utxo.txHash === Deno.args[0]) {
-            console.log(`\nCurrent time: ${currentTime}\n`);
-            console.log(`\nDatum lock time: ${datum.lock_until}\n`);
-        }
+        // if (utxo.txHash === Deno.args[0]) {
+        //     console.log(`\nCurrent time: ${currentTime}\n`);
+        //     console.log(`\nDatum lock time: ${datum.lock_until}\n`);
+        // }
 
-        return (datum.beneficiary === beneficiaryPublicHash &&
-            datum.lock_until <= currentTime) && utxo.txHash === Deno.args[0];
+        return datum.beneficiary === beneficiaryPublicHash &&
+            datum.lock_until <= currentTime;
     } catch (err) {
         console.log(`EEEEEEERRRRRRRRRRRRRRR!!!: ${err.message}`);
         return false;
@@ -121,14 +121,20 @@ console.log(`1 tADA recovered from the contract
 `);
 
 async function unlock(utxos, currentTime, { from, using }): Promise<TxHash> {
-    const laterTime = new Date(currentTime + 4 * 60 * 60 * 1000).getTime();
+    let lower = (Date.now() - 100000);
+    let upper = (Date.now() + 500000);
+
+    lower = lower - lower % 1000;
+    upper = upper - upper % 1000;
+
+    console.log(`Upper - Lower: ${upper - lower}`);
 
     const tx = await lucid
         .newTx()
         .collectFrom(utxos, using)
         .addSigner(await lucid.wallet.address())
-        .validFrom(currentTime)
-        .validTo(laterTime)
+        .validFrom(lower)
+        .validTo(upper)
         .attachSpendingValidator(from)
         .complete();
 
